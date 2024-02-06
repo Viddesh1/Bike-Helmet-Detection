@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <title>index page</title>
+</head>
+<body>
+    <br />
+    <form method = "post" enctype = "multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type = "submit">Upload</button>
+    </form>
+    <br />
+    <br />
+    
+    {% for images in all_images %}
+        <div class = "col-md-4">
+            {{ images.title }}
+            <img src = "{{ images.image.url }}", class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+        </div>
+        
+        <div col-md-4>
+            <video width='400' controls>
+                <source src="{{ images.video.url }}" type='video/mp4'>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    {% endfor %}
+
+    <h2>All Predicted Images and Video</h2>
+    {% for predictions in all_predictions %}
+        <div>
+            <p>Image ID: {{ predictions.pred_image_id.id }}</p>
+            <img src="{{ predictions.pred_image.url }}" alt="Pred Image">
+            {% if predictions.pred_video %}
+                <p>Video: <a href="{{ predictions.pred_video.url }}" target="_blank">Download Video</a></p>
+            {% else %}
+                <p>No Video</p>
+            {% endif %}
+        </div>
+    {% endfor %} 
+
+    {% comment %} <h2>All Predicted Images and Video</h2>
+    {% for predictions in all_predictions %}
+    <div class = "col-md-4">
+        <p>Image ID:{{ predictions.pred_image.id }}</p>
+        <img src = "{{ predictions.pred_image.url }}", class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+    </div>
+    
+    <div col-md-4>
+        <video width='400' controls>
+            <source src="{{ predictions.pred_video.url }}" type='video/avi'>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    {% endfor %} {% endcomment %}
+    
+</body>
+</html>

@@ -1,0 +1,5 @@
+# This are the major packages for this project
+
+Django==5.0.1
+ultralytics==8.1.9
+pillow==10.2.0
