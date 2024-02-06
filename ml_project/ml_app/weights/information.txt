@@ -1,0 +1,2 @@
+# Your trained YOLO model weights goes here.
+# In this weights folder place best.pt and last.pt files.
