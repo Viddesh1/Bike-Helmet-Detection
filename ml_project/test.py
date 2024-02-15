@@ -1,4 +1,4 @@
-from ultralytics import YOLO
+# from ultralytics import YOLO
 
 # Load a pretrained YOLOv8n model
 # model = YOLO('c:/testing/weights/best.pt')
