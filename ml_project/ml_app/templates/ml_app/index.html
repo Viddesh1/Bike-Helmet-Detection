@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = "stylesheet", href = "{% static 'ml_app/style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
@@ -11,7 +13,7 @@
     <title>index page</title>
 </head>
 <body>
-
+    
     <br />
 
     <div class = "container">
@@ -28,10 +30,14 @@
     <br />
     
     <div class = "container">
-        <div class = "row">
-            {% for images in all_images %}
-                <div class = "col-md-6">
+        {% for images in all_images %}
+            <div class = "row">
+                <div class = "col-md-12">
                     <h2>Uploaded Image and Video Image ID:- {{ images.id }}</h2>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-6">
                     <img src = "{{ images.image.url }}", class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
                 </div>
                 
@@ -41,8 +47,9 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
+    </div>    
 
         {% comment %} <h2>All Predicted Images and Video</h2>
         {% for predictions in all_predictions %}
@@ -56,11 +63,15 @@
                 {% endif %}
             </div>
         {% endfor %}  {% endcomment %}
-
-        <div class = "row">
-            {% for predictions in all_predictions %}
-                <div class = "col-md-6">
+    <div class="container">
+        {% for predictions in all_predictions %}
+            <div class = "row">
+                <div class = "col-md-12">
                     <h2>Predicted Images and Video ID:{{ predictions.pred_image_id.id }}</h2>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-6">
                     <img src = "{{ predictions.pred_image.url }}", class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
                 </div>
             
@@ -75,8 +86,8 @@
                         <p>No Video</p>
                     {% endif %}
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
 
     <br>
