@@ -3,3 +3,6 @@
 Django==5.0.1
 ultralytics==8.1.9
 pillow==10.2.0
+
+# Test Coverage
+coverage==7.4.3
