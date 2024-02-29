@@ -6,72 +6,36 @@ import os
 from django.core.files import File
 import shutil
 
-# Create your views here.
+
 def  index(request):
-    # Getting all the uploaded images
     all_images = Image.objects.all()
     all_predictions = PredImage.objects.all()
 
     if request.method == "POST":
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
-            image_instance = form.save(commit=False)
-
-            # # Perform additional processing or predictions here
-            # if image_instance.image:
-                # image_path = os.path.join("media", "images", "bike_rider.jpg")
-            #     # image_path = os.path.join("C:/webapp/ml_project/runs/detect/predict", "bike_rider.jpg")
-                # processed_image_path = predict_yolo(image_path)
-            #     image_instance.pred_image = processed_image_path
-
-            #     # Save the instance to the database
-            #     image_instance.save()
-
+            # image_instance = form.save(commit=False)
             image_instance = form.save()
 
-            # Getting the newest file present in media/images directory.
+            # Getting the newest image file present in media/images directory.
             newest_user_image = upload_image_video(dir_name = "images")
-
             image_path = os.path.join("media", "images", newest_user_image)
             predict_yolo_image(image_path) 
-
             newest_directory, newest_file = image_video_path()
             
+            #  Getting the newest video file present in media/images directory.
             newest_user_video = upload_image_video(dir_name = "videos")
             video_path = os.path.join("media", "videos", newest_user_video)
             predict_yolo_image(video_path)
-
             newest_video_directory, newest_video_file = image_video_path()
-
-            
-            
-            
-            #_________________------------------------____________
-            # image_instance  = Image(
-            #     image = os.path.join("runs", "detect", "predict", "bike_rider.jpg"), 
-            #     video = os.path.join("runs", "detect", "predict", "bike_rider.jpg"), 
-            #     pred_image = os.path.join("runs", "detect", "predict", "bike_rider.jpg"), 
-            #     pred_video =os.path.join("runs", "detect", "predict", "bike_rider.jpg")
-            #     ) 
-            # image_instance .save()
-            # Create a PredImage instance with the Image instance as its primary key
-
-            # pred_image_instance = PredImage(
-            #     pred_image_id=image_instance, 
-            #     pred_image=os.path.join("runs", "detect", "predict", "bike_rider.jpg"), 
-            #     pred_video=os.path.join("runs", "detect", "predict", "bike_rider.jpg")
-            #     )
-            # pred_image_instance.save()
-            
             pred_image_instance = PredImage(pred_image_id=image_instance)
 
             # Open the image file and assign it to the pred_image field
             pred_image_path = os.path.join("runs", "detect", newest_directory, newest_file)
             with open(pred_image_path, 'rb') as pred_image_file:
                 pred_image_instance.pred_image.save(os.path.basename(pred_image_path), File(pred_image_file))
-
             
-            # time.sleep(2)
+            # Open the video file and assign it to the pred_video field
             pred_video_path = os.path.join("runs", "detect", newest_video_directory, newest_video_file)
             with open(pred_video_path, 'rb') as pred_video_file:
                 pred_image_instance.pred_video.save(os.path.basename(pred_video_path), File(pred_video_file))
