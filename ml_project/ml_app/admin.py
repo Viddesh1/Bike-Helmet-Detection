@@ -23,6 +23,7 @@ class ImageAdmin(admin.ModelAdmin):
 
 admin.site.register(Image, ImageAdmin)
 
+
 class PredImageAdmin(admin.ModelAdmin):
     list_display = ('pred_image_id', 'pred_image', 'pred_video')
 
