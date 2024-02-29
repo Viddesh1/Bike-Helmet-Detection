@@ -16,6 +16,7 @@
     
     <br />
 
+    <!-- User Form Field -->
     <div class = "container">
         <div class = "row"> 
             <form method = "POST" enctype = "multipart/form-data">
@@ -29,6 +30,7 @@
     <br />
     <br />
     
+    <!-- Images and Videos uploaded by end user -->
     <div class = "container">
         {% for images in all_images %}
             <div class = "row">
@@ -49,20 +51,12 @@
                 </div>
             </div>
         {% endfor %}
-    </div>    
+    </div>  
 
-        {% comment %} <h2>All Predicted Images and Video</h2>
-        {% for predictions in all_predictions %}
-            <div>
-                <p>Predicted Image ID: {{ predictions.pred_image_id.id }}</p>
-                <img src="{{ predictions.pred_image.url }}" alt="Pred Image">
-                {% if predictions.pred_video %}
-                    <p>Video: <a href="{{ predictions.pred_video.url }}" target="_blank">Download Video</a></p>
-                {% else %}
-                    <p>No Video</p>
-                {% endif %}
-            </div>
-        {% endfor %}  {% endcomment %}
+    <br />
+    <br /> 
+
+    <!-- Predicted Image and Videos by YOLOv8 -->
     <div class="container">
         {% for predictions in all_predictions %}
             <div class = "row">
