@@ -6,3 +6,8 @@ pillow==10.2.0
 
 # Test Coverage
 coverage==7.4.3
+
+# Django-rest Framework
+django-filter==23.5
+djangorestframework==3.14.0
+Markdown==3.5.2 # pip install markdown
