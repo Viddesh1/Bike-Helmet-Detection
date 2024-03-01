@@ -6,6 +6,10 @@ import os
 from django.core.files import File
 import shutil
 
+from rest_framework import viewsets
+from .models import Image, PredImage
+from .serializers import ImageSerializer, PredImageSerializer
+
 
 def  index(request):
     all_images = Image.objects.all()
@@ -50,6 +54,15 @@ def  index(request):
         form = ImageForm()
     
     return render(request, 'ml_app/index.html', {'form': form, 'all_images': all_images, 'all_predictions': all_predictions}) 
+
+
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+
+class PredImageViewSet(viewsets.ModelViewSet):
+    queryset = PredImage.objects.all()
+    serializer_class = PredImageSerializer    
 
 
 
