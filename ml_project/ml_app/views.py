@@ -199,32 +199,32 @@ class ImageViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(image)
         return Response(serializer.data)
 
-    def update(self, request, pk=None):
-        try:
-            image = Image.objects.get(pk=pk)
-        except Image.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-        serializer = self.serializer_class(image, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # def update(self, request, pk=None):
+    #     try:
+    #         image = Image.objects.get(pk=pk)
+    #     except Image.DoesNotExist:
+    #         return Response(status=status.HTTP_404_NOT_FOUND)
+    #     serializer = self.serializer_class(image, data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def partial_update(self, request, pk=None):
-        try:
-            image = Image.objects.get(pk=pk)
-        except Image.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-        serializer = self.serializer_class(image, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # def partial_update(self, request, pk=None):
+    #     try:
+    #         image = Image.objects.get(pk=pk)
+    #     except Image.DoesNotExist:
+    #         return Response(status=status.HTTP_404_NOT_FOUND)
+    #     serializer = self.serializer_class(image, data=request.data, partial=True)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, pk=None):
-        try:
-            image = Image.objects.get(pk=pk)
-        except Image.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-        image.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    # def destroy(self, request, pk=None):
+    #     try:
+    #         image = Image.objects.get(pk=pk)
+    #     except Image.DoesNotExist:
+    #         return Response(status=status.HTTP_404_NOT_FOUND)
+    #     image.delete()
+    #     return Response(status=status.HTTP_204_NO_CONTENT)
