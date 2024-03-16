@@ -1,18 +1,28 @@
 import requests
 import os
+import json
+import credentials
 
 base_url = 'http://127.0.0.1:8000'
 image_url = f'{base_url}/api/images/'
 pred_image_url = f'{base_url}/api/predimages/'
-USERNAME = 'viddesh'
-PASSWORD = '!@#$%^&*()_+'
 
-# response = requests.get(url = f'{base_url}/api/images/20/', auth=(USERNAME, PASSWORD))
+# http://127.0.0.1:8000/api/
+
+# response = requests.get(url = f'{base_url}/api/', auth=(credentials.USERNAME, credentials.PASSWORD))
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
+
+# response = requests.get(url = f'{base_url}/api/images/20/', auth=(credentials.USERNAME, credentials.PASSWORD))
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
+
+# response = requests.get(url = f'{base_url}/api/predimages/15/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # print(response.json())
 
-# response = requests.get(url = f'{base_url}/api/predimages/15/', auth=(USERNAME, PASSWORD))
-# print(response.json())
-
+# response = requests.get(url = f'{base_url}/api/predimages/', auth=(credentials.USERNAME, credentials.PASSWORD))
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
 
 # # Sample data for creating an Image
 # image_data = {
@@ -21,80 +31,29 @@ PASSWORD = '!@#$%^&*()_+'
 # }
 
 # # Send a POST request to create a new Image
-# response = requests.post(image_url, auth=(USERNAME, PASSWORD), files=image_data)
+# response = requests.post(image_url, auth=(credentials.USERNAME, credentials.PASSWORD), files=image_data)
 # print('Image API Response:', response.status_code, response.json())
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
 
-# # Get the response from GET request.
-# response = requests.get(url = f'{base_url}/api/images/25/', auth=(USERNAME, PASSWORD))
-# print(response.json())
+# Get the latest response from GET request.
+# response = requests.get(url = f'{base_url}/api/images/26/', auth=(credentials.USERNAME, credentials.PASSWORD))
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
 
-# # POST response that I just did.
-# response = requests.get(url = f'{base_url}/api/predimages/25/', auth=(USERNAME, PASSWORD))
+# GET the POST response that I just did.
+# response = requests.get(url = f'{base_url}/api/predimages/26/', auth=(credentials.USERNAME, credentials.PASSWORD))
+# print(f"Status code: {response.status_code}\n, {response.json()}")
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
+
+# DELETE response should give error.
+# response = requests.delete(url = f'{base_url}/api/predimages/25/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # print(f"Status code: {response.status_code}\n, {response.json()}")
 
-# # DELETE response should give error.
-# response = requests.delete(url = f'{base_url}/api/predimages/25/', auth=(USERNAME, PASSWORD))
-# print(f"Status code: {response.status_code}\n, {response.json()}")
-
-# Test using authentication token.
-# # Send a POST request to create a new Image
-# response = requests.post('http://127.0.0.1:8000/api/auth/login/', auth=(USERNAME, PASSWORD))
-# print('Image API Response:', response.status_code, response.json())
-
-# Testing token
-# import requests
-
-# # Base URL of your Django server
-# base_url = 'http://127.0.0.1:8000'
-
-# # Token received from the login response
-# token = '3109493ba3fd27de49df87225cd9e76979bdc319ea4819650df0e23344efa29a'
-
-# # Set the Authorization header with the token
-# headers = {'Authorization': f'Token {token}'}
-
-# # Send a GET request to a protected endpoint
-# response = requests.get(f'{base_url}/api/images/20/', headers=headers)
-
-# print(response.status_code)
-# print(response.json())
-
-from knox.auth import TokenAuthentication
-from knox.models import AuthToken
-
-token = 'your_token_here'
-token_object = AuthToken.objects.filter(token_key=token).first()
-
-if token_object and TokenAuthentication().decode_token(token):
-    print("Token is valid")
-else:
-    print("Token is invalid")
 
 
-
-
-# import requests
-# import os
-
-# # Base URL of your Django server
-# base_url = 'http://127.0.0.1:8000'
-
-# # Obtain an authentication token
-# response = requests.post(f'{base_url}/api/token/', data={'username': 'viddesh', 'password': '!@#$%^&*()_+'})
-# token = response.json()['access']
-
-# # Set the authentication token in the request headers
-# # headers = {'Authorization': f'Bearer {token}'}
-
-# # Sample data for creating an Image
-# image_data = {
-#     'image': open(os.path.join(os.getcwd(), "tests", "test_assets", "test_images", "bike_rider.jpg"), 'rb'),
-#     'video': open(os.path.join(os.getcwd(), "tests", "test_assets", "test_videos", 'he2.mp4'), 'rb')
-# }
-
-
-
-
+####################################################
 
 # import requests
 # import os
