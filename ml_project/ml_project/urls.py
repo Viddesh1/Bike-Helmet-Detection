@@ -17,13 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from knox import views as knox_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("ml_app.urls")),
-    path('api-auth/', include('rest_framework.urls'), name='rest_framework'),
-     path('api/auth/', include('knox.urls')),
+    # path('api-auth/', include('rest_framework.urls'), name='rest_framework'),
 ]
 
 
