@@ -11,6 +11,3 @@ coverage==7.4.3
 django-filter==23.5
 djangorestframework==3.14.0
 Markdown==3.5.2 # pip install markdown
-
-# For Tokenization:-
-django-rest-knox==4.2.0
