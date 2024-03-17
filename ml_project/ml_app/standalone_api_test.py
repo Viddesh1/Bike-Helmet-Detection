@@ -36,6 +36,29 @@ pred_image_url = f'{base_url}/api/predimages/'
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
 
+# Sample data for creating an only Image
+image_data = {
+    'image': open(os.path.join(os.getcwd(), "tests", "test_assets", "test_images", "bike_rider.jpg"), 'rb')
+}
+
+# Send a POST request to create a new Image
+response = requests.post(image_url, auth=(credentials.USERNAME, credentials.PASSWORD), files=image_data)
+print('Image API Response:', response.status_code, response.json())
+json_str = json.dumps(response.json(), indent=4)
+print(json_str)
+
+# # Sample data for testing null values. Should give error.
+# image_data = {
+#     'image': [],
+#     'video': []
+# }
+
+# # Send a POST request to create a new Image
+# response = requests.post(image_url, auth=(credentials.USERNAME, credentials.PASSWORD), files=image_data)
+# print('Image API Response:', response.status_code, response.json())
+# json_str = json.dumps(response.json(), indent=4)
+# print(json_str)
+
 # Get the latest response from GET request.
 # response = requests.get(url = f'{base_url}/api/images/26/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # json_str = json.dumps(response.json(), indent=4)
