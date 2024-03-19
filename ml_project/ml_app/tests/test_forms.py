@@ -14,7 +14,7 @@ class ImageFormTestCase(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_image_form_invalid(self):
-        """Invalid form data (missing required feilds) TODO: Proper validation is needed for user form validation"""
+        """Invalid form data (missing required feilds) """
         form_data = {}
         form = ImageForm(data=form_data)
         self.assertTrue(form.is_valid())
