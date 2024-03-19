@@ -1,8 +1,12 @@
 from django import forms
 from . models import Image
 
-# TODO: Add validations to the form data and test case for it.
+
 class ImageForm(forms.ModelForm):
     class Meta:
         model = Image
         fields = ['image', 'video']
+        widgets = {
+            'image': forms.FileInput(attrs={'required': 'required'}),
+            'video': forms.FileInput(attrs={'required': 'required'})
+        }
