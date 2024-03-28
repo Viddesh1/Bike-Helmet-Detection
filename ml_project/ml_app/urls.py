@@ -8,8 +8,8 @@ from .views import ImageViewSet, PredImageViewSet
 
 
 router = routers.DefaultRouter()
-router.register(r'images', ImageViewSet)
-router.register(r'predimages', PredImageViewSet)
+router.register(r'images', ImageViewSet, basename='images')
+router.register(r'predimages', PredImageViewSet, basename='predimages')
 
 
 urlpatterns = [
