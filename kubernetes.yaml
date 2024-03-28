@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bike-helmet-demo
+  namespace: default
+spec:
+  replicas: 3 # if you want to cre more than one replicas.
+  selector:
+    matchLabels:
+      service: django
+  template:
+    metadata:
+      labels:
+        service: django
+    spec:
+      containers:
+        - name: django-service
+          image: viddeshka/automation # Add docker image
+          imagePullPolicy: Always
+          env:
+            - name: POSTGRES_PASSWORD
+              value: mysecretpassword
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-entrypoint
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    service: django
+  ports:
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30001
