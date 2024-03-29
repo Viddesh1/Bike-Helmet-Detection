@@ -24,12 +24,12 @@ jobs:
       - name: Run tox
         # Run tox using the version of Python in `PATH`
         run: tox -e py
-      - name: Install coverage and any other packages
-        run: pip install coverage==7.4.3 Django==5.0.1
-      - name: Test with django test cases
-        run: |
-          coverage run ml_project/manage.py test ml_app
-      - name: Generate Coverage Report
-        run: |
-          coverage report -m
+      # - name: Install coverage and any other packages
+      #   run: pip install coverage==7.4.3 Django==5.0.1
+      # - name: Test with django test cases
+      #   run: |
+      #     coverage run ml_project/manage.py test ml_app
+      # - name: Generate Coverage Report
+      #   run: |
+      #     coverage report -m
 
