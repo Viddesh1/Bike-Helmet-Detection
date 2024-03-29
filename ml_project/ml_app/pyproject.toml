@@ -1,0 +1,75 @@
+[tool.black]
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | node_modules
+  | migrations
+
+  | ^htmlcov$
+  | ^media$
+  | ^ml_project$
+  | ^runs$
+  | \.coverage
+  | \.coveragerc
+  | \.isort\.cfg
+  | \.db\.sqlite3
+  | ^major_packages.txt$
+  | ^manage\.py$
+  | ^requirements\.txt$
+  | ^tox\.ini
+  | ^setup\.py$
+
+  | ^assets$
+  | ^static$
+  | ^templates$
+  | ^weights$
+  | \.isort\.cfg
+
+)/
+'''
+
+[tool.mypy]
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | node_modules
+  | migrations
+
+  | ^htmlcov$
+  | ^media$
+  | ^ml_project$
+  | ^runs$
+  | \.coverage
+  | \.coveragerc
+  | \.isort\.cfg
+  | \.db\.sqlite3
+  | ^major_packages.txt$
+  | ^manage\.py$
+  | ^requirements\.txt$
+  | ^tox\.ini
+  | ^setup\.py$
+
+  | ^assets$
+  | ^static$
+  | ^templates$
+  | ^weights$
+  | \.isort\.cfg
+  
+)/
+'''
