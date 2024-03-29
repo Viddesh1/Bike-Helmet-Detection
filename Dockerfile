@@ -30,6 +30,9 @@ RUN adduser \
     --uid "${UID}" \
     appuser
 
+# RUN pip3 install opencv-python-headless==4.9.0.80
+# RUN pip3 install opencv-contrib-python-headless==4.9.0.80
+
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
