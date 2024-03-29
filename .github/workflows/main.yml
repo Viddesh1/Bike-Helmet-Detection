@@ -1,13 +1,14 @@
-name: Python package
+name: Django tox and coverage tests
 
 on: [push]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python: ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
@@ -17,7 +18,18 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install tox and any other packages
-        run: pip install tox
+        run: 
+          python -m pip install --upgrade pip
+          pip install tox==4.14.2
       - name: Run tox
         # Run tox using the version of Python in `PATH`
         run: tox -e py
+      - name: Install coverage and any other packages
+        run: pip install coverage==7.4.3
+      - name: Test with django test cases
+        run: |
+          coverage run ml_project/manage.py test ml_app
+      - name: Generate Coverage Report
+        run: |
+          coverage report -m
+
