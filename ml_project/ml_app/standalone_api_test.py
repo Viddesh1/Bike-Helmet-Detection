@@ -1,11 +1,13 @@
-import requests
-import os
 import json
+import os
+
+import requests
+
 import credentials
 
-base_url = 'http://127.0.0.1:8000'
-image_url = f'{base_url}/api/images/'
-pred_image_url = f'{base_url}/api/predimages/'
+base_url = "http://127.0.0.1:8000"
+image_url = f"{base_url}/api/images/"
+pred_image_url = f"{base_url}/api/predimages/"
 
 # http://127.0.0.1:8000/api/
 
@@ -74,7 +76,7 @@ pred_image_url = f'{base_url}/api/predimages/'
 # print(json_str)
 
 # # GET the POST response that I just did.
-# response = requests.get(url = f'{base_url}/api/predimages/43/', auth=(credentials.USERNAME, credentials.PASSWORD))
+# response = requests.get(url = f'{base_url}/api/predimages/47/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # print(f"Status code: {response.status_code}")
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
