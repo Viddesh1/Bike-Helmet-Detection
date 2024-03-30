@@ -4,7 +4,7 @@ metadata:
   name: bike-helmet-demo
   namespace: default
 spec:
-  replicas: 3 # if you want to cre more than one replicas.
+  replicas: 3 # if you want to create more than one replicas.
   selector:
     matchLabels:
       service: django
