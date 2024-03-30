@@ -24,8 +24,11 @@ SECRET_KEY = 'django-insecure-rrt77z6z+ky2k3@po#zvmqgilb@ra6-tub%bdb3%+l#k&955)i
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False # For production
 
-ALLOWED_HOSTS = []
+
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"] # # For production
 
 
 # Application definition
@@ -83,6 +86,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# import os
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('POSTGRES_NAME'),
+#         'USER': os.environ.get('POSTGRES_USER'),
+#         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+#         'HOST': 'db',
+#         'PORT': 5432,
+#     }
+# }
 
 
 # Password validation
