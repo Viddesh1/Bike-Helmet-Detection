@@ -16,6 +16,12 @@ This repository contains the implementation of Bike helmet detection using YOLOv
 11) kubernetes.yaml file to test with kubernetes in docker and minikube.
 
 
+# Techology used
+1) Front end :- HTML, CSS, Bootstrap
+2) Backend :- Python (Django, DRF)
+3) Database :- Sqlite (Default)  
+
+
 # Major python libraries used for the project
 ```
 # This are the major packages for this project
