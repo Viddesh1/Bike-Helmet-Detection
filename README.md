@@ -210,6 +210,25 @@ cd Bike-Helmet-Dectection/
 docker compose up
 ```
 
+# Inference on Video
+https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/ded4fec5-4c03-45a4-ba30-b8e5b3aba419
+
+# Inference on Image
+![predicted](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/171410e8-beb8-40c7-b4db-7060bdc163ed)
+
+# Demo
+### Index Page
+![Screenshot_1](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/17dba11c-573b-42d5-9340-86d27072e5e3)
+![Screenshot_2](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/00b92a1d-8a1b-4102-9a1b-30200934bb3e)
+
+### Django admin panel
+![Screenshot_3](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/d663fcaf-a3e8-4077-bde9-22a27fd9fb32)
+![Screenshot_4](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/d699e155-70b6-49bc-abd8-bf9d8deceac9)
+
+### API end points
+![Screenshot_5](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/b3b9471d-6d16-4b19-b6ef-ab8edc6d2e9b)
+![Screenshot_6](https://github.com/Viddesh1/Bike-Helmet-Detection/assets/69793689/a1de954c-9ccd-447b-81bb-c96eb1994fb7)
+
 # Also see
 1) https://github.com/Viddesh1/Helmet_test_1
 2) https://github.com/Viddesh1/Bike-Helmet-Detectionv2
