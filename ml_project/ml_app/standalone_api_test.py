@@ -5,7 +5,8 @@ import requests
 
 import credentials
 
-base_url = "http://127.0.0.1:8000"
+# base_url = "http://127.0.0.1:8000" # For local 
+base_url = "http://0.0.0.0:8000/" # For docker
 image_url = f"{base_url}/api/images/"
 pred_image_url = f"{base_url}/api/predimages/"
 
