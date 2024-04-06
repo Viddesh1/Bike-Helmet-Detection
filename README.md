@@ -242,7 +242,7 @@ kubectl config use-context docker-desktop
 kubectl apply -f kubernetes.yaml
 kubectl get pods
 ```
-# run kubectl using minikube
+# Run kubectl using minikube
 ```
 cd ml_project/
 kubectl config get-contexts
