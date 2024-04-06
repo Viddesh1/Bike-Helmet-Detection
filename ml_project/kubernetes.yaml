@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: django-service
-          image: viddeshka/automation # Add docker image
+          image: bike-helmet-detection # viddeshka/automation # Add docker image
           imagePullPolicy: Always
           env:
             - name: POSTGRES_PASSWORD
