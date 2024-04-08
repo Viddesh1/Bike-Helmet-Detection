@@ -16,16 +16,24 @@ pred_image_url = f"{base_url}/api/predimages/"
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
 
+# ------------------------------------------------------
+
 # response = requests.get(url = f'{base_url}/api/images/20/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
 
+# ------------------------------------------------------
+
 # response = requests.get(url = f'{base_url}/api/predimages/15/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # print(response.json())
+
+# ------------------------------------------------------
 
 # response = requests.get(url = f'{base_url}/api/predimages/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
+
+# ------------------------------------------------------
 
 # # Sample data for creating an Image
 # image_data = {
@@ -39,6 +47,8 @@ pred_image_url = f"{base_url}/api/predimages/"
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
 
+# ------------------------------------------------------
+
 # # Sample data for creating an only Image
 # image_data = {
 #     'image': open(os.path.join(os.getcwd(), "tests", "test_assets", "test_images", "bike_rider.jpg"), 'rb')
@@ -49,6 +59,8 @@ pred_image_url = f"{base_url}/api/predimages/"
 # # print('Image API Response:', response.status_code, response.json())
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
+
+# ------------------------------------------------------
 
 # # Sample data for testing video file only. Should give error.
 # image_data = {
@@ -61,6 +73,8 @@ pred_image_url = f"{base_url}/api/predimages/"
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
 
+# ------------------------------------------------------
+
 # # Sample data for testing null values. Should give error.
 # image_data = {
 # }
@@ -70,6 +84,8 @@ pred_image_url = f"{base_url}/api/predimages/"
 # # print('Image API Response:', response.status_code, response.json())
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
+
+# ------------------------------------------------------
 
 # Get the latest response from GET request.
 # response = requests.get(url = f'{base_url}/api/images/26/', auth=(credentials.USERNAME, credentials.PASSWORD))
@@ -82,6 +98,10 @@ pred_image_url = f"{base_url}/api/predimages/"
 # json_str = json.dumps(response.json(), indent=4)
 # print(json_str)
 
+# ------------------------------------------------------
+
 # # DELETE response should give functionality not found error.
 # response = requests.delete(url = f'{base_url}/api/predimages/25/', auth=(credentials.USERNAME, credentials.PASSWORD))
 # print(f"Status code: {response.status_code}\n, {response.json()}")
+
+# ------------------------------------------------------

@@ -10,6 +10,12 @@ router = routers.DefaultRouter()
 router.register(r"images", ImageViewSet, basename="images")
 router.register(r"predimages", PredImageViewSet, basename="predimages")
 
+"""
+URL patterns for the application.
+
+- /: Index page for the application.
+- /api/: API endpoints for the application.
+"""
 
 urlpatterns = [
     path("", views.index, name="index"),

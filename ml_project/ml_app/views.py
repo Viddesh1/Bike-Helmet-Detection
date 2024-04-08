@@ -14,6 +14,21 @@ from .utils import image_video_path, predict_yolo_image, upload_image_video
 
 # breakpoint()
 def index(request):
+    """
+    View function for the index page.
+
+    This view function handles both GET and POST requests. For GET requests, it renders
+    the index.html template with a form for uploading images/videos and displaying
+    existing images and predictions. For POST requests, it processes the form data,
+    saves the uploaded image/video, makes predictions using YOLOv8, and saves the
+    predictions in the database.
+
+    Args:
+    - request: HttpRequest object representing the request.
+
+    Returns:
+    - HttpResponse: Rendered template response for the index page.
+    """
     all_images = Image.objects.all()
     all_predictions = PredImage.objects.all()
 
@@ -96,11 +111,30 @@ class ImageViewSet(viewsets.ViewSet):
     serializer_class = ImageSerializer
 
     def list(self, request):
+        """
+        List all the image objects present in database to the django restframework API as data.
+
+        Args:
+            - request : request object
+
+        Returns:
+            - A response containing a list of serialized Image instances.
+        """
         images = Image.objects.all()
         serializer = self.serializer_class(images, many=True)
         return Response(serializer.data)
 
     def create(self, request):
+        """
+        Create a new image instance after user send request to API.
+
+        Args:
+        - request: The request object containing the data for the new Image instance.
+
+        Returns:
+        - Response: A response containing the serialized data of PredImage instance only if \
+          the data is valid. Else 400 status code with bad request is sended to the end user
+        """
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
             instance = serializer.save()
@@ -148,6 +182,17 @@ class ImageViewSet(viewsets.ViewSet):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def retrieve(self, request, pk=None):
+        """
+        Retrieve a single Image instance by its primary key by default none.
+
+        Args:
+        - request: The request object.
+        - pk: The primary key of the Image instance to retrieve.
+
+        Returns:
+        - Response: A response containing the serialized data of the retrieved Image instance,
+                    or a 404 status code if the Image instance does not exist.
+        """
         try:
             image = Image.objects.get(pk=pk)
         except Image.DoesNotExist:
