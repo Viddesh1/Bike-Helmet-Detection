@@ -50,8 +50,13 @@ mypy==1.9.0     # Static type checker (optional)
 Bike-Helmet-Detection
 ├── .git # Git file to version control
 ├── .github # Github file for workflows
-│   └── workflows
-│       └── main.yml
+│   ├── ISSUE_TEMPLATE # Github issue template
+│   │   ├── bug_report.yml # bug report issue form template
+│   │   ├── config.yml  # issue config 
+│   │   ├── feature_request.yml #  feature request form template
+│   │   └── pull_request_template.md # custom PR template 
+│   └── workflows # Github workflow to run after a PR
+│       └── main.yml 
 ├── .gitignore # Gitignore file to ignore any unncessary files by git
 ├── ml_project  # Django project file
 │   ├── compose.yaml # Docker compose file to manage docker containers
