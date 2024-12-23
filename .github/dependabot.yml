@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"          # Specify pip as the package ecosystem
+    directory: "/"                    # Location of the requirements.txt file
+    schedule:
+      interval: "manual"              # Set the schedule to manual
+  - package-ecosystem: "github-actions" # If you also want to check GitHub Actions workflows
+    directory: "/"                    # Location of workflow files
+    schedule:
+      interval: "manual"              # Set to manual for GitHub Actions updates as well
