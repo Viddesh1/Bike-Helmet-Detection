@@ -56,7 +56,8 @@ Bike-Helmet-Detection
 │   │   ├── feature_request.yml #  feature request form template
 │   │   └── pull_request_template.md # custom PR template 
 │   └── workflows # Github workflow to run after a PR
-│       └── main.yml 
+│   │     └── main.yml 
+|   └── dependabot.yml # Github dependencies bot to check of any security issue
 ├── .gitignore # Gitignore file to ignore any unncessary files by git
 ├── ml_project  # Django project file
 │   ├── compose.yaml # Docker compose file to manage docker containers
