@@ -3,8 +3,8 @@ updates:
   - package-ecosystem: "pip"          # Specify pip as the package ecosystem
     directory: "/Bike-Helmet-Detection/ml_project"  # Directory containing requirements.txt
     schedule:
-      interval: "manual"              # Set the schedule to manual
+      interval: "monthly"              # Set the schedule to monthly
   - package-ecosystem: "github-actions" # Specify GitHub Actions for workflow dependencies
     directory: "/Bike-Helmet-Detection/.github/workflows"  # Directory containing workflow files
     schedule:
-      interval: "manual"              # Set to manual for GitHub Actions updates
+      interval: "monthly"              # Set to monthly for GitHub Actions updates
