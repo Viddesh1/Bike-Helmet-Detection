@@ -1,0 +1,170 @@
+* 650f243 (HEAD -> Branch-readme-tree) ``` tree -a > tree_all.txt ``` From the codespace.
+* 8c89713 Added tree structure with configurations for the codespaces and vscode Also, added license, code of conduct, security, contributing in the tree structure.
+*   702c242 (origin/main, origin/HEAD, main) Merge pull request #12 from Viddesh1:Branch-vscode-extentions
+|\  
+| * 03ea129 Added .vscode congiguration it will help you in to add the default setup that you would need to run this repository in either code space if you add any extentions please add it to the congiguration.
+|/  
+*   697a70b Merge pull request #11 from Viddesh1:Branch-codespace
+|\  
+| * 69f53cb Added the .devcontainer folder which is the configuration file for the codespace. Whenever you open the codespace in github for this repository this config file will run and install necessary things.
+|/  
+*   c14f616 Merge pull request #10 from Viddesh1/Branch-update-readme
+|\  
+| * b0a451e Update README.md
+|/  
+*   b99166a Merge pull request #9 from Viddesh1/Branch-Security
+|\  
+| * d5d6f83 Create SECURITY.md
+|/  
+*   45b5705 Merge pull request #8 from Viddesh1/Branch-License
+|\  
+| * f518b16 Created LICENSE
+|/  
+*   33ebfa4 Merge pull request #7 from Viddesh1/Branch-Contrib
+|\  
+| * 1033432 Create CONTRIBUTING.md
+|/  
+*   7af3395 Merge pull request #6 from Viddesh1/Branch-code-of-conduct
+|\  
+| * 93e8a5d Created CODE_OF_CONDUCT.md
+|/  
+*   06f8cb5 Merge pull request #5 from Viddesh1/Update-readme
+|\  
+| * 0da08bd Added dependbot.yml to readme file
+* | ae33d53 Merge pull request #4 from Viddesh1/bot-monthly
+|\| 
+| * 85fb10d Apparently manual does not work have to either do with weakly, monthly.
+|/  
+* b32f3b0 Added where the requirement.txt file would be and also added the workflow directory
+*   455b1b6 Merge pull request #3 from Viddesh1/Viddesh1-dependabot
+|\  
+| * 423443d Create dependabot.yml
+|/  
+* 907e285 Added docs repository at the very end of the Also see
+* dfa9fb9 Updated readme.md file for respective ISSUE_TEMPLATE
+* 3d73a3e Adding renamed files
+* 15a9b4a Renamed to bug_report.yml and feature_request.yml
+* 0ca9d62 remoed naming of test as prefix from test_bug_report and test_feature_request also added pull_request_template.md file for more customized pull request
+* df6ee0a Resolved attribute intendation issue
+* 373300e test again
+* 1158146 Added valididation attribute which is required to be true
+* b16d449 deleting files to test yml file configurations
+* 14a44d9 testing yaml
+* 4a30ee7 Added name prefix as test as name conflits where occuring with respect to markfdown file
+* 917ebb9 Added name prefix test as the conflits are occuring for name
+* c7b58e1 Added my custom issue form template for feature request
+* 4e935c4 Added my custom yaml issue form template for bugs
+* 04d321a testing via documentation
+* 6348317 testing bug report using yml configurations
+* cd2baaa Added config.yml file for any user to check out discussions in github or for any help related to this project
+*   3af9830 Merge pull request #2 from Viddesh1/Viddesh1-patch-1
+|\  
+| * e2bc8ca Update issue templates testing without forms
+|/  
+* 7961024 Updated README.md file as per file structure of current github project
+* 8e29378 Removed unncessary comments and improved comment fo kuvernetes.yaml file
+* c21ea0f Added doc strings and informatory comments
+* 54c77e2 Added doc strings and informatory comments
+* 8d2646f updated run to Run
+* d78eda3 Added commands of kubectl to run on docker in kubernetes and minikube
+* 0ccf808 Deleted the deployment_req.txt file as it was only for test purpose
+* d97c8e2 updated utils.py file to add a comment that stream=True does not work as it work only on live stream camera and alos if the stream=True is added to the code the video is not saved to the respective runs/detect/predict which can cause further issue through code backend logic
+* 53e2631 Updated kubernetes.yaml file to apropriate image on bike-helmet-detecction locally run on local machine
+* 492b9a3 updated compose.yaml file to working with local deployment
+* 2b698c5 Added a new line stating base_url for docker testing and deployment specific to docker itself
+* 54cbea8 Moved the file from Bike-Helmet-Detection to ml_project for appropriate access to images so that prediction can be done
+* de126da Moved the docker and kubernetes yaml files to ml_project directory to give appropriate access to images
+* e8189f3 Updated readme structure to latest and added other system dependencies
+* 18d92b6 Added web_cam.py to run inference upon web camera only
+* 9f10c20 Added Video, image output demo with screenshot
+* 9210ad7 Added Technology used
+* dc16c41 Updated spelling
+* 2672c8f Updated with info, key features
+* 72c0220 Updated README.md
+* 26ead94 Removed psyopy2-binary==2.9.9 which is dependencies for postgress docker container
+* 82101d3 Updated settings.py according to deployment
+* 293b579 Added deployment requirements to production environment including docker
+* 1c3a59f Updated spellingod commented code
+* 670cca7 Create a copy of requirements.txt only specific for docker development locally as i was facing some issue with directly running dev_reqirements.txt from ml_project directory
+* ce9cc5e Updated compose.yaml file for devlopment locally
+* c85fe3b Updated Docker for running local development
+* 7020c41 Added Dockerfile with error in some opencv module
+* 271a551 Added Readme.md file by needs update
+* 47ebf8f Added coverage report test-2
+* 7c6e07d Added coverage report test-1
+* c4b6ffd Added coverage report
+* 243a2a7 Added tox workflow for test
+* 7941303 Added local tox conf file for testing locally
+* c5197c6 Added isort, black, tox and mypy
+* ff543c3 Added isort, black, tox and mypy
+* 5e4bf98 Ran isort, black, mypy on files
+* 514da84 Ran isort, black, mypy on files
+* b1bee9b Ran isort, black, mypy on files
+* f400d7a Ran isort, black, mypy on files
+* fbc2a6c Added configurations for black and mypy may not be needed for now
+* cc81178 Added configurations for isort
+* 2b1cc78 Added kubernetes yaml file
+* 87331da Added initial docker setup
+* 91e303f Added last run of yolov8 model
+* a6d0e49 Added best.pt yolov8 model
+* 8d02bbb Test are passing correctly
+* 3765951 API documentation added successfully
+* 6d7da25 Added basename to api router naming images and predimages
+* 9a0d122 commented out the code that takes long time to test. But working fine!
+* e8d33fe updated code for better readibility
+* 3dfa865 Added required validation for API
+* 5d8855e Removed unwanted spaces and commented code
+* 68eaa90 Removed unwanted spaces
+* 8f1ee3a Updated UI added h1
+* 11cdac6 Updated for validation test -successful
+* d75d085 Added validation for both serializer API and user end and added default
+* 34aaf8a Added required validation to the form user data
+* 8175684 Updated data values fields to blank = False and null = True
+* 4a3dd06 Added some tests standalone
+* fe496a4 Added TODO
+* 92a3b56 Deleting the test.py file as the pre-building testing is done
+* 04ed88f Updated after removing of knox-rest-api tokenization
+* 9a73db3 Updated for the removal of knox
+* 15f2eeb Updated for removal of knox
+* e233675 Updated for removal of knox
+* 966e575 Preetyfied the JSON object using json.dumps() for all objects
+* 6566da1 Added credentials for testing standalone_api_test.py file
+* 6dff0d6 Removed rest-api-knox tokenization as it save the token in plain text in database
+* b0e81d8 Updatated for knox
+* 2389e7e Added support for knox authetication testing phase
+* 28f5948 Only list, update and create views make sense
+* a066970 updated urls for knox authentication
+* 2162600 Updated stanalone file for testing standalone API
+* 4fd16aa Added django-rest-knox for token authentication
+* 6450cbd Testing api using standalone application
+* 602c146 Updated views.py to support functionality for API
+* acb0edb Updated serializer to support new data from end user
+* 612527f django-rest support added
+* d267041 updated to support rest-framework
+* 26c2918 updated file
+* 0ebe887 added major django-restframework and its dependencies
+* c51203b Added serializer.py
+* c66b579 Added testcase for views.py
+* 5bf361f Added testcase for urls.py
+* 7e9c7c3 Added testcase for forms.py
+* d159f99 Deleting this file because I will create a package for more functional testing of each components
+* 2504ff3 Differentiated between images and videos for readibility
+* a205ad7 added space code readibility
+* e3a9258 added files to be ignored by coverage of tests cases
+* 7d596cc Enhance code readibility
+* 4c87cc4 Code readibility increased
+* 0114309 Added space for code redibility'
+* e9bc91b Updated the requirements.txt file with latest chanages
+* ced4904 For test coverage installed coverage package
+* 082276c Added Test case for Model.py file
+* 72d76e7 Correctly structured the div elements for better redibility
+* 7e33776 Added background colour
+* a6176af Images and videos can be pre-processed and post processed correctly
+* 7234f16 Added automatic pre-processing of path related to Image and Video by user and predicted video and Image by model.
+* 9594c0f Commented first line which was import ultralytics
+* 4face35 Changed the post' method of the form to CAPITALIZED 'POST'.
+* cdb550c Added information.txt file for placing trained YOLO model files in weights directory
+* 4119fef Added default assets to be uploaded at the front end
+* 7a18eb5  Changes to be committed: 	deleted:    ml_project/ml_app/weights/best.pt 	deleted:    ml_project/ml_app/weights/last.pt
+* 8f36ff5 Initial commmit
+* 0526372 Initial commit
