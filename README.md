@@ -48,6 +48,8 @@ mypy==1.9.0     # Static type checker (optional)
 # File Structure
 ```
 Bike-Helmet-Detection
+├── .devcontainer # Github codespaces development container
+│   └── devcontainer.json # Configurations for codespace
 ├── .git # Git file to version control
 ├── .github # Github file for workflows
 │   ├── ISSUE_TEMPLATE # Github issue template
@@ -55,10 +57,16 @@ Bike-Helmet-Detection
 │   │   ├── config.yml  # issue config 
 │   │   ├── feature_request.yml #  feature request form template
 │   │   └── pull_request_template.md # custom PR template 
+│   ├── dependabot.yml # Github dependencies bot to check of any security issue
 │   └── workflows # Github workflow to run after a PR
-│   │     └── main.yml 
-|   └── dependabot.yml # Github dependencies bot to check of any security issue
+│       └── main.yml
 ├── .gitignore # Gitignore file to ignore any unncessary files by git
+├── .vscode # Vscode workspace settings
+│   └── extensions.json # config file for vscode workspace setting of user
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── SECURITY.md
 ├── ml_project  # Django project file
 │   ├── compose.yaml # Docker compose file to manage docker containers
 │   ├── Dockerfile # Docker file to create a image and run using docker compose or docker build
