@@ -67,6 +67,7 @@ Bike-Helmet-Detection
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── SECURITY.md
+├── graph.txt ```git log --all --decorate --oneline --graph > graph.txt``` git commit graph
 ├── ml_project  # Django project file
 │   ├── compose.yaml # Docker compose file to manage docker containers
 │   ├── Dockerfile # Docker file to create a image and run using docker compose or docker build
