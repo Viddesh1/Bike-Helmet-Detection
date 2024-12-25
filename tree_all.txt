@@ -1,0 +1,191 @@
+.
+├── .devcontainer
+│   └── devcontainer.json
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── ORIG_HEAD
+│   ├── branches
+│   ├── config
+│   ├── description
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── lfs
+│   │   └── tmp
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               ├── HEAD
+│   │               └── main
+│   ├── objects
+│   │   ├── 03
+│   │   │   └── ea129e6831acbb0e505f71c6f7e8ab1ff14223
+│   │   ├── 3f
+│   │   │   └── 1c7cd9c9f0fe6441855e031363f6d7aca55e54
+│   │   ├── 41
+│   │   │   └── 7c34a7f175be505cda2be9cba596c4f716391b
+│   │   ├── 69
+│   │   │   ├── 7a70b70216cadb48911fd0963e62f3ea1766a1
+│   │   │   └── f53cb3d8fa2738912ff7fe5cfeada7955473f9
+│   │   ├── 70
+│   │   │   └── 2c2426338d191d477f3f864bb9538ccf4ae83a
+│   │   ├── 82
+│   │   │   └── 5fc4af25fd5833508f1bb6542926a665f0e618
+│   │   ├── ad
+│   │   │   └── 15ab1f4fe13e8e1726360316206bfb211a9494
+│   │   ├── b5
+│   │   │   └── 7a00c3bb41c23a176148dc86e280cad313339f
+│   │   ├── dc
+│   │   │   └── 5840833cbc02e12ecffc8752e90b5c65ccc8ab
+│   │   ├── info
+│   │   └── pack
+│   │       ├── pack-73bac5e774624ab547db72108a565a0a2cbdd53b.idx
+│   │       ├── pack-73bac5e774624ab547db72108a565a0a2cbdd53b.pack
+│   │       ├── pack-73bac5e774624ab547db72108a565a0a2cbdd53b.rev
+│   │       ├── pack-f790758c4ed0336beba27060ffdcb8ca18176bfe.idx
+│   │       ├── pack-f790758c4ed0336beba27060ffdcb8ca18176bfe.pack
+│   │       └── pack-f790758c4ed0336beba27060ffdcb8ca18176bfe.rev
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       ├── HEAD
+│       │       └── main
+│       └── tags
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   │   ├── bug_report.yml
+│   │   ├── config.yml
+│   │   ├── feature_request.yml
+│   │   └── pull_request_template.md
+│   ├── dependabot.yml
+│   └── workflows
+│       └── main.yml
+├── .gitignore
+├── .vscode
+│   └── extensions.json
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── SECURITY.md
+├── ml_project
+│   ├── .coveragerc
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   ├── README.Docker.md
+│   ├── compose.yaml
+│   ├── deployment_req.txt
+│   ├── kubernetes.yaml
+│   ├── major_packages.txt
+│   ├── manage.py
+│   ├── media
+│   │   ├── images
+│   │   │   └── bike_rider.jpg
+│   │   ├── pred_images
+│   │   │   └── bike_rider.jpg
+│   │   ├── pred_videos
+│   │   │   └── he2.avi
+│   │   └── videos
+│   │       └── he2.mp4
+│   ├── ml_app
+│   │   ├── .isort.cfg
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── assets
+│   │   │   ├── Images
+│   │   │   │   ├── BikesHelmets6.png
+│   │   │   │   ├── BikesHelmets64.png
+│   │   │   │   ├── BikesHelmets66.png
+│   │   │   │   └── bike_rider.jpg
+│   │   │   └── Videos
+│   │   │       ├── he2.mp4
+│   │   │       ├── test_1.mp4
+│   │   │       └── test_2.mp4
+│   │   ├── credentials.py
+│   │   ├── forms.py
+│   │   ├── migrations
+│   │   │   ├── 0001_initial.py
+│   │   │   ├── 0002_image_video.py
+│   │   │   ├── 0003_remove_image_title_alter_image_id.py
+│   │   │   ├── 0004_alter_image_image_alter_image_video.py
+│   │   │   ├── 0005_image_pred_image_image_pred_video.py
+│   │   │   ├── 0006_predimage_remove_image_pred_image_and_more.py
+│   │   │   ├── 0007_alter_predimage_pred_image_and_more.py
+│   │   │   ├── 0008_alter_predimage_pred_image_and_more.py
+│   │   │   └── __init__.py
+│   │   ├── models.py
+│   │   ├── pyproject.toml
+│   │   ├── serializers.py
+│   │   ├── standalone_api_test.py
+│   │   ├── static
+│   │   │   └── ml_app
+│   │   │       └── style.css
+│   │   ├── templates
+│   │   │   └── ml_app
+│   │   │       └── index.html
+│   │   ├── tests
+│   │   │   ├── __init__.py
+│   │   │   ├── test_assets
+│   │   │   │   ├── test_images
+│   │   │   │   │   ├── BikesHelmets6.png
+│   │   │   │   │   ├── BikesHelmets64.png
+│   │   │   │   │   ├── BikesHelmets66.png
+│   │   │   │   │   └── bike_rider.jpg
+│   │   │   │   └── test_videos
+│   │   │   │       ├── he2.mp4
+│   │   │   │       ├── test_1.mp4
+│   │   │   │       └── test_2.mp4
+│   │   │   ├── test_forms.py
+│   │   │   ├── test_model.py
+│   │   │   ├── test_urls.py
+│   │   │   └── test_views.py
+│   │   ├── urls.py
+│   │   ├── utils.py
+│   │   ├── views.py
+│   │   ├── web_cam.py
+│   │   └── weights
+│   │       ├── best.pt
+│   │       ├── information.txt
+│   │       └── last.pt
+│   ├── ml_project
+│   │   ├── __init__.py
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── requirements.txt
+│   ├── runs
+│   │   └── detect
+│   │       ├── predict
+│   │       │   └── bike_rider.jpg
+│   │       └── predict2
+│   │           └── he2.avi
+│   └── tox.ini
+└── tree_all.txt
+
+58 directories, 130 files
