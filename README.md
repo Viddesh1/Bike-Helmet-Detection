@@ -5,7 +5,7 @@ This repository contains the implementation of Bike helmet detection using YOLOv
 # Key Features
 1) Github actions workflow for test with tox.
 2) Unit testing test cases is done for testing modules.
-3) API is ceated using django-rest-framework.
+3) API is created using django-rest-framework.
 4) API documentation is created using markdown.
 5) coverage report is generated.
 6) For sorting imports isort is used.
